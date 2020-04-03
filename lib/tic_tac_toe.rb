@@ -15,6 +15,7 @@ class TicTacToe
     @board = Array.new(9, " ")
     @won = false
     @winner = nil
+    @win_combo = []
   end
   
   def display_board
@@ -75,15 +76,14 @@ class TicTacToe
   end
   
   def won?
-    win_combo = []
     WIN_COMBINATIONS.each do |combo|
       if @board[combo[0]] == @board[combo[1]] && @board[combo[0]] == @board[combo[2]] && @board[combo[0]] != " "
         @won = true
-        win_combo = combo
+        @win_combo = combo
       end
     end
     if @won == true
-      win_combo.each
+      @win_combo.each
     else
       false
     end
