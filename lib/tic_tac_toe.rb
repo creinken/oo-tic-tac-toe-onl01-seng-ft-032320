@@ -93,9 +93,10 @@ class TicTacToe
   end
   
   def draw?
+    won?
     if full? && !@won
       true
-    elsif won?
+    elsif @won
       false
     else
       false
