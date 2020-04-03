@@ -24,7 +24,8 @@ class TicTacToe
   end
   
   def input_to_index(input)
-    Integer(input, 10) - 1
+    return_value = Integer(input, 10) - 1
+    puts return_value
   end
   
   def move(index, token="X")
@@ -36,9 +37,7 @@ class TicTacToe
   end
   
   def valid_move?(index)
-    if index == "invalid"
-      false
-    elsif index > 8 || index < 0
+    if index > 8 || index < 0
       nil
     elsif position_taken?(index)
       false
