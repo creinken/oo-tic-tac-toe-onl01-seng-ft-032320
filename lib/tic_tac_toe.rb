@@ -48,7 +48,6 @@ class TicTacToe
   end
   
   def turn
-    player = current_player
     valid = false
     
     until valid
