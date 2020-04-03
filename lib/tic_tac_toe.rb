@@ -121,5 +121,9 @@ class TicTacToe
     while !over?
       turn
     end
+    if draw?
+      puts "Cat's Game!"
+    else
+      
   end
 end
