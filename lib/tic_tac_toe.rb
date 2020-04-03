@@ -14,6 +14,7 @@ class TicTacToe
   def initialize
     @board = Array.new(9, " ")
     @won = false
+    @winner = ""
   end
   
   def display_board
