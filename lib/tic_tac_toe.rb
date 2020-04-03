@@ -53,14 +53,14 @@ class TicTacToe
     player = current_player
     valid = valid_move?(index)
     
-    if valid
-      move(index, current_player)
-    else
+    until valid
       puts "Not a valid move. Please select 1 - 9"
       input = gets.chomp
       index = input_to_index(input)
       valid = valid_move?(index)
     end
+    
+    move(index, current_player)
   end
   
   def turn_count
