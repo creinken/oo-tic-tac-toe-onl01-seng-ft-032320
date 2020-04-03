@@ -48,11 +48,19 @@ class TicTacToe
   end
   
   def turn
-    # input = gets.chomp
-    # index = input_to_index(input)
-    # player = current_player
-    # valid = valid_move?(index)
+    input = gets.chomp
+    index = input_to_index(input)
+    player = current_player
+    valid = valid_move?(index)
     
+    if valid
+      move(index, current_player)
+    else
+      puts "Not a valid move. Please select 1 - 9"
+      input = gets.chomp
+      index = input_to_index(input)
+      valid = valid_move?(index)
+    end
   end
   
   def turn_count
