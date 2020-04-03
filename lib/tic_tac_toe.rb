@@ -114,7 +114,7 @@ class TicTacToe
   end
   
   def winner
-    
+    @winner
   end
   
   def play
