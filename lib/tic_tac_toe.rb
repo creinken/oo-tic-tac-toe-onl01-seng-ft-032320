@@ -25,8 +25,11 @@ class TicTacToe
   
   def input_to_index(input)
     begin
-      Integer(input, 10) - 1
-      rescue ArgumentError
+      return_value = Integer(input, 10) - 1
+    rescue ArgumentError
+      return_value = -1
+    end
+    return_value
   end
   
   def move(index, token="X")
