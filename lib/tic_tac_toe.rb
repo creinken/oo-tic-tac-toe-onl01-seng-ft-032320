@@ -80,7 +80,7 @@ class TicTacToe
         win_combo = combo
       end
     end
-    if won == true
+    if @won == true
       win_combo
     else
       false
@@ -92,7 +92,7 @@ class TicTacToe
   end
   
   def draw?
-    if full? && !won?
+    if full? && !@won
       true
     else
       false
