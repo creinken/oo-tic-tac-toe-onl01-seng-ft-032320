@@ -36,7 +36,9 @@ class TicTacToe
   end
   
   def valid_move?(index)
-    if index > 8 || index < 0
+    if index == "invalid"
+      false
+    elsif index > 8 || index < 0
       nil
     elsif position_taken?(index)
       false
@@ -51,7 +53,6 @@ class TicTacToe
     # player = current_player
     # valid = valid_move?(index)
     
-    while 
   end
   
   def turn_count
