@@ -78,8 +78,6 @@ class TicTacToe
       if @board[combo[0]] == @board[combo[1]] && @board[combo[0]] == @board[combo[2]] && @board[combo[0]] != " "
         @won = true
         win_combo = combo
-      else
-        won = false
       end
     end
     if won == true
